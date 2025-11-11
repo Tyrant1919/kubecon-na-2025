@@ -2,17 +2,15 @@ apiVersion: example.crossplane.io/v1
 kind: App
 metadata:
   annotations:
-    terasky.backstage.io/source-info: >-
-      {"pushToGit":true,"gitBranch":"main","gitRepo":"github.com?owner=tyrant1919&repo=kubecon-na-2025","gitLayout":"cluster-scoped","basePath":"demo-cluster/backstage-deom/App"}
-    terasky.backstage.io/add-to-catalog: 'true'
+    terasky.backstage.io/source-info: '{"pushToGit":true,"gitBranch":"main","gitRepo":"github.com?owner=tyrant1919&repo=kubecon-na-2025","gitLayout":"cluster-scoped","basePath":"demo-cluster/backstage-deom/App"}'
+    terasky.backstage.io/add-to-catalog: "true"
     terasky.backstage.io/owner: group:default/guests
     terasky.backstage.io/system: backstage-deom
-    terasky.backstage.io/source-file-url: >-
-      https://github.com/tyrant1919/kubecon-na-2025/blob/main/demo-cluster/backstage-deom/App/demo-app-01.yaml
+    terasky.backstage.io/source-file-url: https://github.com/tyrant1919/kubecon-na-2025/blob/main/demo-cluster/backstage-deom/App/demo-app-01.yaml
   name: demo-app-01
   namespace: backstage-deom
 spec:
-  image: nginx
+  image: nginx:latest
   crossplane:
     compositionUpdatePolicy: Automatic
     compositionRef:
